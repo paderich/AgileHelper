@@ -8,7 +8,9 @@ def signup(request):
         form = UserCreationForm(request.POST)
 
         if form.is_valid():
-            user = form.save()
+            user = form.save(commit=False)
+            user.is_organisator = True
+            user.save()
             Userprofile.objects.create(user=user)
 
             return redirect('/login/')
