@@ -5,6 +5,7 @@ __pycache__/
 
 #staticfiles
 staticfiles/
+node_modules/
 
 
 # C extensions
